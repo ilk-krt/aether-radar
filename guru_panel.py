@@ -24,59 +24,59 @@ GLOBAL_MAP = {
     "Kamu (XLU)": ["PHO", "TAN"]
 }
 
-# Tüm Sektörlerin Genişletilmiş Ana Bileşenleri (Top Holdings)
-ETF_HOLDINGS = {
+# Genişletilmiş ETF Bilgi Kütüphanesi (Alan Tanımı + Genişletilmiş Hisseler)
+ETF_INFO = {
     # --- TEKNOLOJİ, YARI İLETKEN & YAPAY ZEKA ---
-    "SMH": ["NVDA (Nvidia)", "TSM (Taiwan Semi)", "AVGO (Broadcom)", "ASML", "AMD", "MU (Micron)", "INTC (Intel)", "KLAC", "LRCX", "ADI"],
-    "SOXX": ["NVDA", "AVGO", "AMD", "TXN (Texas Inst)", "MU", "INTC", "AMAT (Applied Mat)", "QCOM (Qualcomm)", "ADI", "MCHP"],
-    "BOTZ": ["ISRG (Intuitive)", "NVDA", "ABB", "KEYENCE", "FANUC", "TER (Teradyne)", "YASKAWA", "PATH (UiPath)", "OMRON"],
-    "CIBR": ["PANW (Palo Alto)", "CRWD (Crowdstrike)", "FTNT (Fortinet)", "NET (Cloudflare)", "ZS (Zscaler)", "OKTA", "CHKP (Check Point)", "AKAM (Akamai)"],
-    "IGV": ["ADBE (Adobe)", "CRM (Salesforce)", "INTU (Intuit)", "ORCL (Oracle)", "MSFT (Microsoft)", "NOW (ServiceNow)", "SNOW (Snowflake)", "MDB (MongoDB)"],
-    "ARKF": ["COIN (Coinbase)", "SHOP (Shopify)", "SQ (Block)", "MELI (MercadoLibre)", "HOOD (Robinhood)", "DKNG (DraftKings)", "TOAST", "PYPL (PayPal)"],
+    "SMH": {"area": "Yarı İletken Devleri & Çip Üretimi", "stocks": ["NVDA (Nvidia)", "TSM (Taiwan Semi)", "AVGO (Broadcom)", "ASML", "AMD", "MU (Micron)", "INTC (Intel)", "KLAC", "LRCX", "ADI"]},
+    "SOXX": {"area": "Global Çip Ekosistemi & Tasarım", "stocks": ["NVDA", "AVGO", "AMD", "TXN (Texas Inst)", "MU", "INTC", "AMAT (Applied Mat)", "QCOM (Qualcomm)", "ADI", "MCHP"]},
+    "BOTZ": {"area": "Robotik Sistemler & Endüstriyel AI", "stocks": ["ISRG (Intuitive)", "NVDA", "ABB", "KEYENCE", "FANUC", "TER (Teradyne)", "YASKAWA", "PATH (UiPath)", "OMRON"]},
+    "CIBR": {"area": "Siber Güvenlik & Veri Koruma Ağları", "stocks": ["PANW (Palo Alto)", "CRWD (Crowdstrike)", "FTNT (Fortinet)", "NET (Cloudflare)", "ZS (Zscaler)", "OKTA", "CHKP (Check Point)", "AKAM (Akamai)"]},
+    "IGV": {"area": "Bulut Yazılım & Kurumsal SaaS", "stocks": ["ADBE (Adobe)", "CRM (Salesforce)", "INTU (Intuit)", "ORCL (Oracle)", "MSFT (Microsoft)", "NOW (ServiceNow)", "SNOW (Snowflake)", "MDB (MongoDB)"]},
+    "ARKF": {"area": "Finansal Teknoloji & Dijital Ödemeler", "stocks": ["COIN (Coinbase)", "SHOP (Shopify)", "SQ (Block)", "MELI (MercadoLibre)", "HOOD (Robinhood)", "DKNG (DraftKings)", "TOAST", "PYPL (PayPal)"]},
     
     # --- SAVUNMA, HAVACILIK & UZAY ---
-    "ITA": ["RTX (Raytheon)", "LMT (Lockheed)", "BA (Boeing)", "GD (General Dynamics)", "NOC (Northrop)", "TDG (TransDigm)", "HWM (Howmet)", "LHX (L3Harris)", "TXT (Textron)"],
-    "XAR": ["GE (General Electric)", "TDG", "HWM", "LMT", "RTX", "AXON", "NOC", "RKLB (Rocket Lab)", "BKS (Barnes)"],
-    "IYT": ["UNP (Union Pacific)", "UPS", "UBER", "FDX (FedEx)", "CSX", "NSC", "ODFL (Old Dominion)", "DAL (Delta)", "EXPD"],
-    "PAVE": ["TRNE (Trane)", "ETN (Eaton)", "URI (United Rentals)", "DE (Deere)", "CAT (Caterpillar)", "VMC (Vulcan)", "MLM (Martin Marietta)", "EMR (Emerson)"],
-    "JETS": ["DAL (Delta)", "UAL (United)", "AAL (American)", "LUV (Southwest)", "ALGT", "ALK (Alaska Air)", "JBLU (JetBlue)", "SAVE (Spirit)"],
+    "ITA": {"area": "Havacılık, Savunma & Ulusal Güvenlik", "stocks": ["RTX (Raytheon)", "LMT (Lockheed)", "BA (Boeing)", "GD (General Dynamics)", "NOC (Northrop)", "TDG (TransDigm)", "HWM (Howmet)", "LHX (L3Harris)", "TXT (Textron)"]},
+    "XAR": {"area": "Gelişmiş Uzay Teknolojileri & Donanım", "stocks": ["GE (General Electric)", "TDG", "HWM", "LMT", "RTX", "AXON", "NOC", "RKLB (Rocket Lab)", "BKS (Barnes)"]},
+    "IYT": {"area": "Ulaşım, Lojistik & Kargo Taşımacılığı", "stocks": ["UNP (Union Pacific)", "UPS", "UBER", "FDX (FedEx)", "CSX", "NSC", "ODFL (Old Dominion)", "DAL (Delta)", "EXPD"]},
+    "PAVE": {"area": "Altyapı, İnşaat & Endüstriyel Üretim", "stocks": ["TRNE (Trane)", "ETN (Eaton)", "URI (United Rentals)", "DE (Deere)", "CAT (Caterpillar)", "VMC (Vulcan)", "MLM (Martin Marietta)", "EMR (Emerson)"]},
+    "JETS": {"area": "Hava Yolu Taşımacılığı & Global Operatörler", "stocks": ["DAL (Delta)", "UAL (United)", "AAL (American)", "LUV (Southwest)", "ALGT", "ALK (Alaska Air)", "JBLU (JetBlue)", "SAVE (Spirit)"]},
     
     # --- ENERJİ, URANYUM & YEŞİL DÖNÜŞÜM ---
-    "XOP": ["XOM (Exxon)", "CVX (Chevron)", "COP (Conoco)", "EOG", "PXD (Pioneer)", "HES (Hess)", "DVN (Devon)", "OXY (Occidental)", "MRO"],
-    "OIH": ["SLB (Schlumberger)", "HAL (Halliburton)", "BKR (Baker Hughes)", "FTI (TechnipFMC)", "VLO (Valero)", "MPC (Marathon)", "PSX (Phillips 66)", "HP"],
-    "URA": ["CCJ (Cameco)", "KAP (Kazatomprom)", "UUUU (Energy Fuels)", "NLR", "BWXT", "DNN (Denison Mines)", "NXE (NexGen)", "UEC (Uranium Energy)"],
-    "ICLN": ["BE (Bloom Energy)", "FSLR (First Solar)", "ENPH (Enphase)", "VWS (Vestas)", "ORSTED", "NEE (NextEra)", "EDPR", "PLUG (Plug Power)", "DQ"],
-    "TAN": ["FSLR", "ENPH", "NXT (Nextracker)", "SEDG (SolarEdge)", "RUN (Sunrun)", "TPW", "SHLS (Shoals)", "SPWR (SunPower)"],
+    "XOP": {"area": "Petrol & Doğalgaz Arama/Çıkarma", "stocks": ["XOM (Exxon)", "CVX (Chevron)", "COP (Conoco)", "EOG", "PXD (Pioneer)", "HES (Hess)", "DVN (Devon)", "OXY (Occidental)", "MRO"]},
+    "OIH": {"area": "Petrol Servisleri & Sondaj Ekipmanları", "stocks": ["SLB (Schlumberger)", "HAL (Halliburton)", "BKR (Baker Hughes)", "FTI (TechnipFMC)", "VLO (Valero)", "MPC (Marathon)", "PSX (Phillips 66)", "HP"]},
+    "URA": {"area": "Nükleer Enerji & Uranyum Madenciliği", "stocks": ["CCJ (Cameco)", "KAP (Kazatomprom)", "UUUU (Energy Fuels)", "NLR", "BWXT", "DNN (Denison Mines)", "NXE (NexGen)", "UEC (Uranium Energy)"]},
+    "ICLN": {"area": "Temiz Enerji & Karbonsuz Dönüşüm", "stocks": ["BE (Bloom Energy)", "FSLR (First Solar)", "ENPH (Enphase)", "VWS (Vestas)", "ORSTED", "NEE (NextEra)", "EDPR", "PLUG (Plug Power)", "DQ"]},
+    "TAN": {"area": "Güneş Enerjisi & Panel Üretimi", "stocks": ["FSLR", "ENPH", "NXT (Nextracker)", "SEDG (SolarEdge)", "RUN (Sunrun)", "TPW", "SHLS (Shoals)", "SPWR (SunPower)"]},
     
     # --- MATERYALLER & LİTYUM ---
-    "LIT": ["ALB (Albemarle)", "SQM", "BYD", "TSLA (Tesla)", "CATL", "ALTM (Arcadium)", "LAC (Lithium Americas)", "PIL (Pilbara Minerals)", "PMG"],
-    "XME": ["FCX (Freeport)", "NUE (Nucor)", "STLD (Steel Dynamics)", "AA (Alcoa)", "CLF (Cleveland-Cliffs)", "RS (Reliance)", "MP (MP Materials)"],
-    "GDX": ["NEM (Newmont)", "GOLD (Barrick)", "AEM (Agnico Eagle)", "WPM (Wheaton)", "KGC (Kinross)", "PAAS (Pan American)"],
-    "REMX": ["ALB", "MP (MP Materials)", "Lynas Rare Earths", "Ganfeng Lithium", "Tianqi Lithium"],
+    "LIT": {"area": "Lityum Döngüsü & Batarya Teknolojileri", "stocks": ["ALB (Albemarle)", "SQM", "BYD", "TSLA (Tesla)", "CATL", "ALTM (Arcadium)", "LAC (Lithium Americas)", "PIL (Pilbara Minerals)", "PMG"]},
+    "XME": {"area": "Metaller, Madencilik & Çelik Sanayi", "stocks": ["FCX (Freeport)", "NUE (Nucor)", "STLD (Steel Dynamics)", "AA (Alcoa)", "CLF (Cleveland-Cliffs)", "RS (Reliance)", "MP (MP Materials)"]},
+    "GDX": {"area": "Altın Madencileri & Değerli Metaller", "stocks": ["NEM (Newmont)", "GOLD (Barrick)", "AEM (Agnico Eagle)", "WPM (Wheaton)", "KGC (Kinross)", "PAAS (Pan American)"]},
+    "REMX": {"area": "Nadir Toprak Elementleri & Stratejik Metaller", "stocks": ["ALB", "MP (MP Materials)", "Lynas Rare Earths", "Ganfeng Lithium", "Tianqi Lithium"]},
     
     # --- SAĞLIK & BİYOTEKNOLOJİ ---
-    "XBI": ["MRNA (Moderna)", "VRTX (Vertex)", "AMGN (Amgen)", "GILD (Gilead)", "BIIB (Biogen)", "REGN (Regeneron)", "SGEN", "BNTX (BioNTech)"],
-    "IHI": ["ABT (Abbott)", "MDT (Medtronic)", "ISRG (Intuitive)", "SYK (Stryker)", "BSX (Boston Sci)", "EW (Edwards)", "DXCM (Dexcom)", "ZBH"],
-    "ARKG": ["EXAS (Exact Sciences)", "CRSP (CRISPR)", "PACB (Pacific Bio)", "NTLA (Intellia)", "EDIT (Editas)", "NVTA", "BEAM"],
+    "XBI": {"area": "Biyoteknoloji & Genetik Araştırmalar", "stocks": ["MRNA (Moderna)", "VRTX (Vertex)", "AMGN (Amgen)", "GILD (Gilead)", "BIIB (Biogen)", "REGN (Regeneron)", "SGEN", "BNTX (BioNTech)"]},
+    "IHI": {"area": "Tıbbi Cihazlar & Cerrahi Teknolojiler", "stocks": ["ABT (Abbott)", "MDT (Medtronic)", "ISRG (Intuitive)", "SYK (Stryker)", "BSX (Boston Sci)", "EW (Edwards)", "DXCM (Dexcom)", "ZBH"]},
+    "ARKG": {"area": "Genomik Devrim & Yaşam Bilimleri", "stocks": ["EXAS (Exact Sciences)", "CRSP (CRISPR)", "PACB (Pacific Bio)", "NTLA (Intellia)", "EDIT (Editas)", "NVTA", "BEAM"]},
     
     # --- TÜKETİM, BAHİS & EĞLENCE ---
-    "BETZ": ["DKNG (DraftKings)", "FLUT (Flutter)", "EVO (Evolution)", "PENN", "MGM (Resorts)", "CZR (Caesars)", "WYNN", "GENI (Genius Sports)"],
-    "XRT": ["CVNA (Carvana)", "ANF (Abercrombie)", "AMZN (Amazon)", "COST (Costco)", "WMT (Walmart)", "TGT (Target)", "TJX", "DLTR"],
-    "XHB": ["LEN (Lennar)", "DHI (DR Horton)", "PHM (PulteGroup)", "LOW (Lowe's)", "HD (Home Depot)", "NVR", "TOL (Toll Brothers)"],
-    "IBUY": ["AMZN", "EBAY", "ETSY", "CHWY (Chewy)", "MELI", "QRTEA", "JD (JD.com)"],
+    "BETZ": {"area": "Online Bahis & iGaming Teknolojileri", "stocks": ["DKNG (DraftKings)", "FLUT (Flutter)", "EVO (Evolution)", "PENN", "MGM (Resorts)", "CZR (Caesars)", "WYNN", "GENI (Genius Sports)"]},
+    "XRT": {"area": "Perakende Ticaret & Tüketici Harcamaları", "stocks": ["CVNA (Carvana)", "ANF (Abercrombie)", "AMZN (Amazon)", "COST (Costco)", "WMT (Walmart)", "TGT (Target)", "TJX", "DLTR"]},
+    "XHB": {"area": "Konut İnşaatı & Ev Geliştirme", "stocks": ["LEN (Lennar)", "DHI (DR Horton)", "PHM (PulteGroup)", "LOW (Lowe's)", "HD (Home Depot)", "NVR", "TOL (Toll Brothers)"]},
+    "IBUY": {"area": "E-Ticaret & Dijital Pazaryerleri", "stocks": ["AMZN", "EBAY", "ETSY", "CHWY (Chewy)", "MELI", "QRTEA", "JD (JD.com)"]},
     
     # --- FİNANS & BANKACILIK ---
-    "KRE": ["NYCB", "WAL (Western Alliance)", "ZION (Zions)", "CMA (Comerica)", "TFC (Truist)", "HBAN (Huntington)", "RF (Regions)", "FITB"],
-    "KIE": ["CB (Chubb)", "PGR (Progressive)", "ALL (Allstate)", "TRV (Travelers)", "MET (MetLife)", "PRU (Prudential)", "AFL (Aflac)"],
-    "IAI": ["MS (Morgan Stanley)", "GS (Goldman Sachs)", "IBKR (Interactive Brokers)", "SCHW (Charles Schwab)", "RJF (Raymond James)", "LPLA"],
+    "KRE": {"area": "ABD Bölgesel Bankacılık Sistemi", "stocks": ["NYCB", "WAL (Western Alliance)", "ZION (Zions)", "CMA (Comerica)", "TFC (Truist)", "HBAN (Huntington)", "RF (Regions)", "FITB"]},
+    "KIE": {"area": "Sigortacılık & Risk Yönetimi", "stocks": ["CB (Chubb)", "PGR (Progressive)", "ALL (Allstate)", "TRV (Travelers)", "MET (MetLife)", "PRU (Prudential)", "AFL (Aflac)"]},
+    "IAI": {"area": "Yatırım Bankacılığı & Aracı Kurumlar", "stocks": ["MS (Morgan Stanley)", "GS (Goldman Sachs)", "IBKR (Interactive Brokers)", "SCHW (Charles Schwab)", "RJF (Raymond James)", "LPLA"]},
     
     # --- DİĞERLERİ & KÜRESEL ---
-    "SOCL": ["META", "GOOGL (Alphabet)", "Tencent", "SNAP", "PINS (Pinterest)", "GRVY", "BIDU", "SPOT (Spotify)"],
-    "HERO": ["NVDA", "NTDOY (Nintendo)", "SE (Sea)", "EA (Electronic Arts)", "TTWO (Take-Two)", "RBLX (Roblox)", "U (Unity)", "UBSFY (Ubisoft)"],
-    "SRVR": ["EQIX (Equinix)", "AMT (American Tower)", "DLR (Digital Realty)", "CCI (Crown Castle)", "SBAC", "UNIT"],
-    "PHO": ["AWK (American Water)", "XYL (Xylem)", "WTS (Watts)", "AWR", "SBS (Sabesp)", "TTEK"],
-    "MOO": ["DE (Deere)", "ZTS (Zoetis)", "TSCO (Tractor Supply)", "CTVA (Corteva)", "ADM (Archer Daniels)", "NTR (Nutrien)", "FMC"],
-    "PBJ": ["MDLZ (Mondelez)", "PEP (Pepsi)", "KO (Coca-Cola)", "KHC (Kraft)", "GIS (General Mills)", "HSY (Hershey)", "TSN (Tyson)"]
+    "SOCL": {"area": "Sosyal Medya & İletişim Ağları", "stocks": ["META", "GOOGL (Alphabet)", "Tencent", "SNAP", "PINS (Pinterest)", "GRVY", "BIDU", "SPOT (Spotify)"]},
+    "HERO": {"area": "Video Oyunları & Dijital Eğlence", "stocks": ["NVDA", "NTDOY (Nintendo)", "SE (Sea)", "EA (Electronic Arts)", "TTWO (Take-Two)", "RBLX (Roblox)", "U (Unity)", "UBSFY (Ubisoft)"]},
+    "SRVR": {"area": "Veri Merkezleri & Altyapı GYO", "stocks": ["EQIX (Equinix)", "AMT (American Tower)", "DLR (Digital Realty)", "CCI (Crown Castle)", "SBAC", "UNIT"]},
+    "PHO": {"area": "Su Teknolojileri & Arıtma Sistemleri", "stocks": ["AWK (American Water)", "XYL (Xylem)", "WTS (Watts)", "AWR", "SBS (Sabesp)", "TTEK"]},
+    "MOO": {"area": "Tarım Teknolojileri & Gıda Üretimi", "stocks": ["DE (Deere)", "ZTS (Zoetis)", "TSCO (Tractor Supply)", "CTVA (Corteva)", "ADM (Archer Daniels)", "NTR (Nutrien)", "FMC"]},
+    "PBJ": {"area": "Temel Tüketim & Hazır Gıda", "stocks": ["MDLZ (Mondelez)", "PEP (Pepsi)", "KO (Coca-Cola)", "KHC (Kraft)", "GIS (General Mills)", "HSY (Hershey)", "TSN (Tyson)"]}
 }
 
 SUB_TICKERS = [item for sublist in GLOBAL_MAP.values() for item in sublist]
