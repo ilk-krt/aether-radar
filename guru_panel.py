@@ -138,7 +138,7 @@ if st.button("HEDEF KİLİTLE (Deep Scan)"):
             if val == "🐋 WHALE": return 'background-color: #01579b; color: white'
             return ''
 
-        styled_df = scan_results.style.applymap(color_signal, subset=['Sinyal'])
+        styled_df = scan_results.style.map(color_signal, subset=['Sinyal'])
         st.dataframe(styled_df, use_container_width=True)
 
         # Görsel Matris
