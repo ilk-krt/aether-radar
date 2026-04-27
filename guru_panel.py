@@ -133,12 +133,12 @@ if "scan_results" in st.session_state:
         if val == "🐋 WHALE": return 'background-color: #01579b; color: white'
         return ''
 
-    # Seçim mekanizması
+# Ana Tablo (Seçim mekanizması düzeltildi)
     selection_event = st.dataframe(
         res.style.map(color_signal, subset=['Sinyal']),
         use_container_width=True,
         on_select="rerun",
-        selection_mode="single_row",
+        selection_mode="single-row", # BURASI DÜZELTİLDİ: "single-row"
         key="main_table"
     )
 
