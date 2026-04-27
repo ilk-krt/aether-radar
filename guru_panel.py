@@ -184,20 +184,28 @@ if "scan_results" in st.session_state:
         key="main_table"
     )
 
-    # Detay Paneli (Sadece seçim varsa görünür)
+# --- DETAY PANELİ (GÜNCELLENMİŞ VERSİYON) ---
     if selection_event.selection.rows:
         selected_idx = selection_event.selection.rows[0]
         ticker = res.iloc[selected_idx]['Ticker']
         
+        # HATA BURADAYDI: ETF_HOLDINGS yerine ETF_INFO kullanıyoruz
+        # Eğer ETF_INFO sözlüğünde bu ticker yoksa varsayılan değerleri getirir
+        info = ETF_INFO.get(ticker, {"area": "Sektörel Veri", "stocks": ["Veri Mevcut Değil"]})
+        
         st.success(f"🔍 **{ticker} Analiz Paneli**")
+        
+        # Yeni eklenen Odak Alanı bilgisi
+        st.info(f"🌐 **Odak Alanı:** {info['area']}")
+        
         c1, c2 = st.columns(2)
         with c1:
             st.write(f"**Fusion Skoru:** {res.iloc[selected_idx]['Fusion Skor']}/5")
             st.write(f"**Whale Power:** %{res.iloc[selected_idx]['Whale Power']}")
         with c2:
             st.write("**Bileşen Balinalar (Top Holdings):**")
-            holdings = ETF_HOLDINGS.get(ticker, ["Veri mevcut değil."])
-            for h in holdings:
+            # info içindeki 'stocks' listesini döner
+            for h in info['stocks']:
                 st.write(f"• {h}")
         st.divider()
 
